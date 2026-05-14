@@ -1,0 +1,122 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{ /* Variáveis */
+    --principal:#1D1F1F;
+    --secundario:#161717;
+    --terciario:#2D2E2E;
+    --borda:#2D2E2E;
+    --fundo:#144D37;
+    --texto:#ffffff;
+    --textosecundario:#A9A9A9;
+    --fundosecundario:#103D2C;
+    --destaques:#25D366;
+    --meta:#DA78FE;
+}
+/* ======================== */
+/* ======================== */
+/* ======================== */
+/* MENU LATERAL */
+#viewport { /* Layout */
+    display: grid;
+    grid-template-columns: 65px 1fr 2fr;
+
+    background-color: var(--texto);
+    width: 100vw;
+    height: 100vh;
+}
+/* ======================== */
+.menu{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--principal);
+    border: 0.5px solid var(--borda);
+}
+.menu_itens, .menu_config{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    list-style-type: none;
+    color: var(--textosecundario);
+    font-size: 1.1em;
+}
+.menu_config{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+.menu_itens li, .menu_config li{
+    position: relative;
+
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.menu_itens li span, .menu_config li span{
+    display: none;
+
+    position: absolute;
+    left: 50px;
+    background-color: var(--texto);
+    font-size: 0.8em;
+    color: var(--principal);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+.menu_itens li:hover span,.menu_config li:hover span{
+    display: inline;
+}
+.menu_itens .initial{
+    color: var(--texto);
+    background-color: var(--terciario);
+}
+.menu_itens li:hover, .menu_config li:hover{
+    background-color: var(--terciario);
+}
+.meta_ai{
+    color: var(--meta);
+}
+.story{
+    transform: translatey(2px); /* centraliza o icone */
+}
+hr{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 1px;
+}
+/* ======================== */
+/* ======================== */
+/* ======================== */
+/* FINAL MENU LATERAL */
+/* TELA DE ACESSO */
+.acesso{
+    grid-column: 2;
+    background-color: var(--secundario);
+    min-width: 350px;
+}
+.acesso .title{
+    padding: 20px;
+    color: var(--texto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.acesso .title h1{
+    font-weight: normal;
+    font-size: 1.4em;
+}
+.acesso .title ul{
+    display: flex;
+    align-items: center;
+
+    list-style-type: none;
+}
