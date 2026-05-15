@@ -367,6 +367,9 @@ hr{
     padding: 42px 42px;
     border-radius: 20px;
 }
+.principal .conteudo .cards div .icone:hover{
+    background-color: var(--secundario);
+}
 .principal .conteudo .cards div p{
     color: var(--textosecundario);
     margin-top: 15px;
